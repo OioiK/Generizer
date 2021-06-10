@@ -1,0 +1,12 @@
+﻿namespace Generizer.Forms.Controls
+{
+    internal class TextControl : DataControlAbstract
+    {
+        public override string GenerateHtml()
+        {
+            var props = this.GenerateProperties();
+            string html = $"{props.Label}<p/><input type=\'text\' {props.Properties}/>";
+            return this.GenerateControl(html);
+        }
+    }
+}
